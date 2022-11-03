@@ -69,21 +69,6 @@
           return;
 
       }
-      // if (event.which === 37) {
-      //   // left
-      //   --index;
-      // } else if (event.which === 39) {
-      //   // right
-      //   ++index;
-      // } else if (event.which === 36) {
-      //   // home
-      //   index = 0;
-      // } else if (event.which === 35) {
-      //   // end
-      //   index = list.length - 1;
-      // } else {
-      //   return;
-      // }
 
       if (index >= list.length) {
         index = 0;
