@@ -10,8 +10,8 @@
     const r = t.querySelectorAll(".t"), n = Array.from(r).map(e => e.dataset.id), i = t.querySelector(".r");
 
     function c(e) {
-      const r = t.querySelector(`.t[data-id=${e}]`), n = t.querySelector(`.section__panel[data-id=${e}]`),
-        c = t.querySelector(".u"), s = t.querySelector(".section__panel:not(.zz)");
+      const r = t.querySelector(`.t[data-id=${e}]`), n = t.querySelector(`.aq[data-id=${e}]`),
+        c = t.querySelector(".u"), s = t.querySelector(".aq:not(.zz)");
       a = e, c.classList.remove("u"), c.setAttribute("aria-selected", "false"), c.removeAttribute("tabindex"), r.classList.add("u"), r.setAttribute("aria-selected", "true"), r.setAttribute("tabindex", "0"), r.focus({preventScroll: !0}), s.classList.add("zz"), s.setAttribute("aria-hidden", "true"), n.classList.remove("zz"), n.setAttribute("aria-hidden", "false"), i.value = e
     }
 
