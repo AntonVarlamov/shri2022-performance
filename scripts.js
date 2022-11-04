@@ -1,1 +1,56 @@
-(()=>{function e(e,t,a){Array.from(e).forEach(e=>{e.addEventListener(t,a)})}function t(t){let a=t.querySelector(".section__tab_active").dataset.id;const r=t.querySelectorAll(".section__tab"),n=Array.from(r).map(e=>e.dataset.id),i=t.querySelector(".section__select");function c(e){const r=t.querySelector(`.section__tab[data-id=${e}]`),n=t.querySelector(`.section__panel[data-id=${e}]`),c=t.querySelector(".section__tab_active"),s=t.querySelector(".section__panel:not(.section__panel_hidden)");a=e,c.classList.remove("section__tab_active"),c.setAttribute("aria-selected","false"),c.removeAttribute("tabindex"),r.classList.add("section__tab_active"),r.setAttribute("aria-selected","true"),r.setAttribute("tabindex","0"),r.focus({preventScroll:!0}),s.classList.add("section__panel_hidden"),s.setAttribute("aria-hidden","true"),n.classList.remove("section__panel_hidden"),n.setAttribute("aria-hidden","false"),i.value=e}i.addEventListener("input",()=>{c(i.value)}),e(r,"click",e=>{c(e.target.dataset.id)}),e(r,"keydown",e=>{if(e.ctrlKey||e.metaKey||e.shiftKey||e.altKey)return;let t=n.indexOf(a);switch(e.which){case 37:--t;break;case 39:++t;break;case 36:t=0;break;case 35:t=n.length-1;break;default:return}t>=n.length?t=0:t<0&&(t=n.length-1),c(n[t]),e.preventDefault()})}function a(e){let t=!1;const a=document.querySelector(".header__links");e.addEventListener("click",()=>{t=!t,e.setAttribute("aria-expanded",t?"true":"false"),e.querySelector(".header__menu-text").textContent=t?"Закрыть меню":"Открыть меню",a.classList.toggle("header__links_opened",t),a.classList.add("header__links-toggled")})}document.addEventListener("DOMContentLoaded",()=>{Array.from(document.querySelectorAll(".main__devices")).forEach(t),Array.from(document.querySelectorAll(".header__menu")).forEach(a)})})();
+(() => {
+  function e(e, t, a) {
+    Array.from(e).forEach(e => {
+      e.addEventListener(t, a)
+    })
+  }
+
+  function t(t) {
+    let a = t.querySelector(".u").dataset.id;
+    const r = t.querySelectorAll(".t"), n = Array.from(r).map(e => e.dataset.id), i = t.querySelector(".r");
+
+    function c(e) {
+      const r = t.querySelector(`.t[data-id=${e}]`), n = t.querySelector(`.section__panel[data-id=${e}]`),
+        c = t.querySelector(".u"), s = t.querySelector(".section__panel:not(.section__panel_hidden)");
+      a = e, c.classList.remove("section__tab_active"), c.setAttribute("aria-selected", "false"), c.removeAttribute("tabindex"), r.classList.add("section__tab_active"), r.setAttribute("aria-selected", "true"), r.setAttribute("tabindex", "0"), r.focus({preventScroll: !0}), s.classList.add("section__panel_hidden"), s.setAttribute("aria-hidden", "true"), n.classList.remove("section__panel_hidden"), n.setAttribute("aria-hidden", "false"), i.value = e
+    }
+
+    i.addEventListener("input", () => {
+      c(i.value)
+    }), e(r, "click", e => {
+      c(e.target.dataset.id)
+    }), e(r, "keydown", e => {
+      if (e.ctrlKey || e.metaKey || e.shiftKey || e.altKey) return;
+      let t = n.indexOf(a);
+      switch (e.which) {
+        case 37:
+          --t;
+          break;
+        case 39:
+          ++t;
+          break;
+        case 36:
+          t = 0;
+          break;
+        case 35:
+          t = n.length - 1;
+          break;
+        default:
+          return
+      }
+      t >= n.length ? t = 0 : t < 0 && (t = n.length - 1), c(n[t]), e.preventDefault()
+    })
+  }
+
+  function a(e) {
+    let t = !1;
+    const a = document.querySelector(".e");
+    e.addEventListener("click", () => {
+      t = !t, e.setAttribute("aria-expanded", t ? "true" : "false"), e.querySelector(".header__menu-text").textContent = t ? "Закрыть меню" : "Открыть меню", a.classList.toggle("header__links_opened", t), a.classList.add("header__links-toggled")
+    })
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    Array.from(document.querySelectorAll(".m")).forEach(t), Array.from(document.querySelectorAll(".d")).forEach(a)
+  })
+})();
