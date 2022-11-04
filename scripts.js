@@ -12,7 +12,7 @@
     function c(e) {
       const r = t.querySelector(`.t[data-id=${e}]`), n = t.querySelector(`.section__panel[data-id=${e}]`),
         c = t.querySelector(".u"), s = t.querySelector(".section__panel:not(.section__panel_hidden)");
-      a = e, c.classList.remove("section__tab_active"), c.setAttribute("aria-selected", "false"), c.removeAttribute("tabindex"), r.classList.add("section__tab_active"), r.setAttribute("aria-selected", "true"), r.setAttribute("tabindex", "0"), r.focus({preventScroll: !0}), s.classList.add("section__panel_hidden"), s.setAttribute("aria-hidden", "true"), n.classList.remove("section__panel_hidden"), n.setAttribute("aria-hidden", "false"), i.value = e
+      a = e, c.classList.remove("section__tab_active"), c.setAttribute("aria-selected", "false"), c.removeAttribute("tabindex"), r.classList.add("u"), r.setAttribute("aria-selected", "true"), r.setAttribute("tabindex", "0"), r.focus({preventScroll: !0}), s.classList.add("section__panel_hidden"), s.setAttribute("aria-hidden", "true"), n.classList.remove("section__panel_hidden"), n.setAttribute("aria-hidden", "false"), i.value = e
     }
 
     i.addEventListener("input", () => {
@@ -46,7 +46,7 @@
     let t = !1;
     const a = document.querySelector(".e");
     e.addEventListener("click", () => {
-      t = !t, e.setAttribute("aria-expanded", t ? "true" : "false"), e.querySelector(".header__menu-text").textContent = t ? "Закрыть меню" : "Открыть меню", a.classList.toggle("header__links_opened", t), a.classList.add("header__links-toggled")
+      t = !t, e.setAttribute("aria-expanded", t ? "true" : "false"), e.querySelector(".header__menu-text").textContent = t ? "Закрыть меню" : "Открыть меню", a.classList.toggle("g", t), a.classList.add("f")
     })
   }
 
