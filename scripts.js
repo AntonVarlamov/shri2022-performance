@@ -11,8 +11,8 @@
 
     function c(e) {
       const r = t.querySelector(`.t[data-id=${e}]`), n = t.querySelector(`.section__panel[data-id=${e}]`),
-        c = t.querySelector(".u"), s = t.querySelector(".section__panel:not(.section__panel_hidden)");
-      a = e, c.classList.remove("section__tab_active"), c.setAttribute("aria-selected", "false"), c.removeAttribute("tabindex"), r.classList.add("u"), r.setAttribute("aria-selected", "true"), r.setAttribute("tabindex", "0"), r.focus({preventScroll: !0}), s.classList.add("section__panel_hidden"), s.setAttribute("aria-hidden", "true"), n.classList.remove("section__panel_hidden"), n.setAttribute("aria-hidden", "false"), i.value = e
+        c = t.querySelector(".u"), s = t.querySelector(".section__panel:not(.zz)");
+      a = e, c.classList.remove("u"), c.setAttribute("aria-selected", "false"), c.removeAttribute("tabindex"), r.classList.add("u"), r.setAttribute("aria-selected", "true"), r.setAttribute("tabindex", "0"), r.focus({preventScroll: !0}), s.classList.add("zz"), s.setAttribute("aria-hidden", "true"), n.classList.remove("zz"), n.setAttribute("aria-hidden", "false"), i.value = e
     }
 
     i.addEventListener("input", () => {
